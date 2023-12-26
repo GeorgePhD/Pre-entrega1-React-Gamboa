@@ -1,4 +1,4 @@
-import './Navbar.css';
+import '../styles/navbar.css';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
@@ -13,8 +13,8 @@ const Navbar = () => {
         <nav className='menu'>
         {/* icon goes here  TODO: add icons */}
             <ul className='menu-ul'>
-                <li><Link className='menu-brand' to='/'>Cafer</Link></li>
-                <li><Link className='menu-items' to='/home'>Home</Link></li>
+                <li><Link className='menu-brand' to='/'>Cafer products</Link></li>
+                <li><Link className='menu-items' to='/'>Home</Link></li>
                 <li><Link className='menu-items' to='/About'>About</Link></li>
                 <li><Link className='menu-items' to='/Products'>Products</Link></li>
                 <li><Link className='menu-items' to='/Contact'>Contact</Link></li>

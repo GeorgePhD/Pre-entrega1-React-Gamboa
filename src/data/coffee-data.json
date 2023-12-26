@@ -1,0 +1,182 @@
+[
+    {
+        "id": 1,
+        "brand_name": "Cafer",
+        "brew": "Espresso",
+        "price": 5.99,
+        "country": "Italy",
+        "strength": "Strong",
+        "image_url": "cafer-1.png"
+    },
+    {
+        "id": 2,
+        "brand_name": "Morning Roast",
+        "brew": "Medium Roast",
+        "price": 8.49,
+        "country": "United States",
+        "strength": "Medium",
+        "image_url": "cafer-2.jpg"
+    },
+    {
+        "id": 3,
+        "brand_name": "Bean Bliss",
+        "brew": "Dark Roast",
+        "price": 7.29,
+        "country": "Brazil",
+        "strength": "Strong",
+        "image_url": "cafer-3.jpg"
+    },
+    {
+        "id": 4,
+        "brand_name": "Mountain Aroma",
+        "brew": "French Press",
+        "price": 6.99,
+        "country": "Ethiopia",
+        "strength": "Bold",
+        "image_url": "cafer-4.jpg"
+    },
+    {
+        "id": 5,
+        "brand_name": "Golden Harvest",
+        "brew": "Pour Over",
+        "price": 9.99,
+        "country": "Colombia",
+        "strength": "Medium",
+        "image_url": "cafer-5.jpg"
+    },
+    {
+        "id": 6,
+        "brand_name": "Sunrise Brew",
+        "brew": "Light Roast",
+        "price": 8.79,
+        "country": "Costa Rica",
+        "strength": "Mild",
+        "image_url": "cafer-6.jpg"
+    },
+    {
+        "id": 7,
+        "brand_name": "Mystic Mocha",
+        "brew": "Mocha",
+        "price": 10.99,
+        "country": "Switzerland",
+        "strength": "Medium",
+        "image_url": "cafer-7.jpg"
+    },
+    {
+        "id": 8,
+        "brand_name": "African Elixir",
+        "brew": "African Roast",
+        "price": 11.49,
+        "country": "Kenya",
+        "strength": "Strong",
+        "image_url": "cafer-8.jpg"
+    },
+    {
+        "id": 9,
+        "brand_name": "Arabian Nights",
+        "brew": "Arabica",
+        "price": 12.79,
+        "country": "Saudi Arabia",
+        "strength": "Medium",
+        "image_url": "cafer-9.jpg"
+    },
+    {
+        "id": 10,
+        "brand_name": "Pacific Blend",
+        "brew": "Pacific Roast",
+        "price": 10.29,
+        "country": "Indonesia",
+        "strength": "Bold",
+        "image_url": "cafer-10.jpeg"
+    },
+    {
+        "id": 11,
+        "brand_name": "Nordic Chill",
+        "brew": "Iced Coffee",
+        "price": 7.99,
+        "country": "Sweden",
+        "strength": "Mild",
+        "image_url": "cafer-11.jpg"
+    },
+    {
+        "id": 12,
+        "brand_name": "South American Spice",
+        "brew": "Spiced Coffee",
+        "price": 9.49,
+        "country": "Argentina",
+        "strength": "Medium",
+        "image_url": "cafer-12.jpg"
+    },
+    {
+        "id": 13,
+        "brand_name": "Oriental Euphoria",
+        "brew": "Turkish Coffee",
+        "price": 13.99,
+        "country": "Turkey",
+        "strength": "Strong",
+        "image_url": "cafer-13.jpg"
+    },
+    {
+        "id": 14,
+        "brand_name": "Alpine Delight",
+        "brew": "Alpine Roast",
+        "price": 8.99,
+        "country": "Switzerland",
+        "strength": "Medium",
+        "image_url": "cafer-14.jpeg"
+    },
+    {
+        "id": 15,
+        "brand_name": "Island Paradise",
+        "brew": "Tropical Blend",
+        "price": 11.99,
+        "country": "Jamaica",
+        "strength": "Bold",
+        "image_url": "cafer-15.png"
+    },
+    {
+        "id": 16,
+        "brand_name": "Autumn Harvest",
+        "brew": "Seasonal Blend",
+        "price": 9.79,
+        "country": "Canada",
+        "strength": "Medium",
+        "image_url": "cafer-16.jpg"
+    },
+    {
+        "id": 17,
+        "brand_name": "Midnight Symphony",
+        "brew": "Decaf",
+        "price": 10.49,
+        "country": "France",
+        "strength": "Mild",
+        "image_url": "cafer-17.jpg"
+    },
+    {
+        "id": 18,
+        "brand_name": "Wild West Roast",
+        "brew": "Cowboy Coffee",
+        "price": 12.29,
+        "country": "United States",
+        "strength": "Strong",
+        "image_url": "cafer-18.jpg"
+    },
+    {
+        "id": 19,
+        "brand_name": "Eastern Elegance",
+        "brew": "Green Coffee",
+        "price": 14.99,
+        "country": "China",
+        "strength": "Medium",
+        "image_url": "cafer-19.jpg"
+    },
+    {
+        "id": 20,
+        "brand_name": "Mediterranean Magic",
+        "brew": "Greek Coffee",
+        "price": 11.79,
+        "country": "Greece",
+        "strength": "Bold",
+        "image_url": "cafer-20.jpg"
+    }
+]

@@ -7,18 +7,20 @@ import Contact from './Components/Contact.jsx';
 import Cart from './Components/Cart.jsx';
 import Home from './Components/Home.jsx';
 import ItemListContainer from './Components/ItemListContainer.jsx';
+import ItemDetailContainer from './Components/ItemDetailContainer.jsx';
 function App() {
 
-  const greeting = 'Welcome to Cafer Coffee';
+  /* const greeting = 'Welcome to Cafer Coffee'; */
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/">
 
         <Navbar />
-        <ItemListContainer greeting={greeting}/>
-
+       {/*  <ItemListContainer greeting={greeting}/> */}
         <Routes>
+          <Route path='/' element={<ItemListContainer />} />
+          <Route path='/item/:id' element={<ItemDetailContainer />} />
           <Route path='/home' element={<Home />} />
           <Route path='/about' element={ <About /> } />
           <Route path='/products' element={ <Products />} />
@@ -28,7 +30,8 @@ function App() {
         
         
       </BrowserRouter>
-      
+  
+      {/* <ItemDetailContainer itemId={2}/> */}
     </>
   )
 }

@@ -1,6 +1,6 @@
-import React from 'react'
-import '../Components/texts.css';
-import image from '../assets/cafer-1.png';
+
+import '../styles/texts.css';
+import image from '/assets/cafer-1.png';
 const Cart = () => {
 
     return (

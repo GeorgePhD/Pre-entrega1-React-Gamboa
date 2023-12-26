@@ -1,5 +1,4 @@
-import React from 'react';
-import image from '../assets/cafer-1.png';
+import image from '/assets/cafer-1.png';
 
 
 const Home = () => {
