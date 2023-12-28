@@ -2,17 +2,23 @@ import { useEffect, useState } from 'react';
 import { getData } from '../Components/helpers/getData';
 import ItemList from './ItemList';
 import PropTypes from 'prop-types';
-
-const ItemListContainer = ({ greeting }) => {
+import { useParams } from 'react-router-dom';
+const ItemListContainer = () => {
 
     const [products, setProducts] = useState([]);
-    console.log(products)
+    const strength = useParams().strength;
+    console.log(strength)
+
     useEffect(() => {
         getData()
             .then((res) => {
-                setProducts(res)
+                if(strength) {
+                    setProducts(res.filter((product) => product.strength === strength));
+                } else {
+                    setProducts(res);
+                }
             })
-    }, [])
+    },[strength]);
 
 
 

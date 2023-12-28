@@ -5,9 +5,7 @@ const Cart = () => {
 
     return (
         <>
-
-        <h1>Cart</h1>
-        <p>This is the cart page</p>
+        <h1 className='title'>the cart information will be placed here</h1>
         <img className='products-img' src={image} />
         </>
     )

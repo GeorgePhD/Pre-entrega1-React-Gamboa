@@ -6,8 +6,6 @@ const Item = ({product}) => {
         <div>
             <div className='products'>
                 <img className='products-container-img' src={`/assets/${product.image_url}`} alt="" />
-                console.log(`/assets/${product.image_url}`);
-
                 <p className='products-container-p'>Brand : {product.brand_name}</p>
                 <p className='products-container-p'>Brew : {product.brew}</p>
                 <p className='products-container-p'>Price : {product.price}</p>

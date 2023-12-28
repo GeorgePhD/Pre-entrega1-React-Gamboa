@@ -2,7 +2,7 @@ import Navbar from './Components/Navbar.jsx';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import About from './Components/About.jsx';
-import Products from './Components/Products.jsx';
+/* import Products from './Components/Products.jsx'; */
 import Contact from './Components/Contact.jsx';
 import Cart from './Components/Cart.jsx';
 import Home from './Components/Home.jsx';
@@ -17,19 +17,22 @@ function App() {
       <BrowserRouter basename="/">
 
         <Navbar />
-       {/*  <ItemListContainer greeting={greeting}/> */}
+        {/* <ItemListContainer greeting={greeting}/> */}
         <Routes>
-          <Route path='/' element={<ItemListContainer />} />
+          <Route path='/' element={<Home />} />
           <Route path='/item/:id' element={<ItemDetailContainer />} />
           <Route path='/home' element={<Home />} />
           <Route path='/about' element={ <About /> } />
-          <Route path='/products' element={ <Products />} />
-          <Route path='/contact' element={ <Contact />} />
-          <Route path='/cart' element={ <Cart />} />
+          <Route path='/products/' element={<ItemListContainer />} />
+          <Route path='/products/:strength' element={<ItemListContainer />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/cart' element={<Cart />} />
         </Routes>
         
         
       </BrowserRouter>
+
+      <footer className='footer title'>the footer information will be placed here</footer>
   
       {/* <ItemDetailContainer itemId={2}/> */}
     </>

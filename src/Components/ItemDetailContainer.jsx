@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { getItemById } from "../Components/helpers/getData";
 import ItemDetail from "./ItemDetail";
-import PropTypes from 'prop-types';
+/* import PropTypes from 'prop-types'; */
 import {useParams}  from 'react-router-dom';
 
 const ItemDetailContainer = () => {
@@ -9,6 +9,7 @@ const ItemDetailContainer = () => {
     
     const [Item, setItem] = useState(null);
     const id = useParams().id;
+    console.log(id)
 
     useEffect(() => {
         getItemById(Number(id))
@@ -24,8 +25,8 @@ const ItemDetailContainer = () => {
         </>
     )
 }
-ItemDetailContainer.propTypes = {
+/* ItemDetailContainer.propTypes = {
     itemId: PropTypes.number.isRequired,  // Adjust the prop type based on your requirements
-};
+}; */
 
 export default ItemDetailContainer
