@@ -10,6 +10,7 @@ const Navbar = () => {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
     const [strength, setStrength] = useState([]);
 
+
     const toggleDropdown = () => {
         setDropdownOpen(!isDropdownOpen);
     };
@@ -18,13 +19,13 @@ const Navbar = () => {
 
         const uniqueStrengths = [...new Set(coffeeData.map(coffee => coffee.strength))];
         setStrength(uniqueStrengths);
-    }, []);
 
+    }, []);
     return (
 
 
         <nav className='menu'>
-            {/* icon goes here  TODO: add icons */}
+            
             <ul className='menu-ul'>
                 <li><Link className='menu-brand' to='/products'>Cafer products</Link></li>
                 <li><Link className='menu-items' to='/'>Home</Link></li>
@@ -42,7 +43,7 @@ const Navbar = () => {
                     )}
                 </li>
                 <li><Link className='menu-items' to='/contact'>Contact</Link></li>
-                <li><Link className='menu-items' to='/cart'><FontAwesomeIcon className='shopping-cart' icon={faShoppingCart} /><span>15</span><FontAwesomeIcon /></Link></li>
+                <li><Link className='menu-items' to='/cart'><FontAwesomeIcon className='shopping-cart' icon={faShoppingCart}><span>15</span></FontAwesomeIcon></Link></li>
             </ul>
         </nav>
 

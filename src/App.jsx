@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter basename="/">
+      <BrowserRouter>
 
         <Navbar />
         {/* <ItemListContainer greeting={greeting}/> */}
@@ -23,7 +23,7 @@ function App() {
           <Route path='/item/:id' element={<ItemDetailContainer />} />
           <Route path='/home' element={<Home />} />
           <Route path='/about' element={ <About /> } />
-          <Route path='/products/' element={<ItemListContainer />} />
+          <Route path='/products' element={<ItemListContainer />} />
           <Route path='/products/:strength' element={<ItemListContainer />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/cart' element={<Cart />} />

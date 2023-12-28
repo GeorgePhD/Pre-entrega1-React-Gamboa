@@ -9,7 +9,7 @@ const ItemDetailContainer = () => {
     
     const [Item, setItem] = useState(null);
     const id = useParams().id;
-    console.log(id)
+    console.log("id:",id)
 
     useEffect(() => {
         getItemById(Number(id))
