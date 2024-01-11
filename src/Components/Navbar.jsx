@@ -27,7 +27,7 @@ const Navbar = () => {
         <nav className='menu'>
             
             <ul className='menu-ul'>
-                <li><Link className='menu-brand' to='/products'>Cafer products</Link></li>
+                <li><Link className='menu-brand' to='/products'>Coffee products</Link></li>
                 <li><Link className='menu-items' to='/'>Home</Link></li>
                 <li><Link className='menu-items' to='/About'>About</Link></li>
                 <li><Link className='menu-items' to='/products'>Products</Link></li>
@@ -43,7 +43,7 @@ const Navbar = () => {
                     )}
                 </li>
                 <li><Link className='menu-items' to='/contact'>Contact</Link></li>
-                <li><Link className='menu-items' to='/cart'><FontAwesomeIcon className='shopping-cart' icon={faShoppingCart}><span>15</span></FontAwesomeIcon></Link></li>
+                <li><Link className='menu-items' to='/cart'><FontAwesomeIcon className='shopping-cart' icon={faShoppingCart}></FontAwesomeIcon><span className='cart-quantity'>15</span></Link></li>
             </ul>
         </nav>
 

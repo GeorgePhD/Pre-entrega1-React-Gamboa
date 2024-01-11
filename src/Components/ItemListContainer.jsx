@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import { getData } from '../Components/helpers/getData';
 import ItemList from './ItemList';
-import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
+import { collection, getDocs, query, where } from 'firebase/firestore';
+import { db } from '../firebase/config';
 const ItemListContainer = () => {
 
     const [products, setProducts] = useState([]);
@@ -10,15 +10,28 @@ const ItemListContainer = () => {
     console.log(strength)
 
     useEffect(() => {
-        getData()
-            .then((res) => {
-                if(strength) {
-                    setProducts(res.filter((product) => product.strength === strength));
-                } else {
-                    setProducts(res);
-                }
-            })
-    },[strength]);
+
+        const productsRef = collection(db, 'products');
+
+        let queryProduct;
+        //other way to do it, using the ternary operator
+        //const queryProduct = strength ? query(productsRef, where('strength', '==', strength)) : productsRef;
+
+        if (strength) {
+            queryProduct = query(productsRef, where('strength', '==', strength));
+        } else {
+            queryProduct = productsRef; 
+        }
+
+        getDocs(queryProduct).then((res) => {
+
+            setProducts(
+                res.docs.map((doc) => {
+                    return { ...doc.data(), id: doc.id }
+                }))
+        })
+
+    }, [strength]);
 
 
 
@@ -29,8 +42,5 @@ const ItemListContainer = () => {
     )
 }
 
-ItemListContainer.propTypes = {
-    greeting: PropTypes.string, // Add PropTypes for greeting if it's used
-};
 
 export default ItemListContainer

@@ -10,6 +10,7 @@ const ItemDetail = ({ item }) => {
             <p className='products-container-p'>Strength : {item.strength}</p>
             <p className='products-container-p'>Country : {item.country}</p>
             <p className='products-container-p'>$ {item.price}</p>
+            <button>Add to cart</button>
         </div>
     )
 }

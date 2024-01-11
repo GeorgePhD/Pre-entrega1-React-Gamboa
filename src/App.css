@@ -97,7 +97,7 @@
   box-shadow: 1px 1px 4px #646cff;
 }
 .form {
-  width: 25%;
+  width: 50rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -121,4 +121,14 @@
 .form-btn:hover {
   background-color: #535bf2;
   transition: all 300ms ease-in-out;
+}
+.cart-quantity {
+  color: #ffffff;
+  font-size: 2.5rem;
+}
+@media screen and (max-width: 347px) {
+  .form {
+    width: 30rem;
+    padding: 2rem;
+  }
 }

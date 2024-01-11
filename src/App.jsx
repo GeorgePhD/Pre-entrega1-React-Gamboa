@@ -8,6 +8,9 @@ import Cart from './Components/Cart.jsx';
 import Home from './Components/Home.jsx';
 import ItemListContainer from './Components/ItemListContainer.jsx';
 import ItemDetailContainer from './Components/ItemDetailContainer.jsx';
+/* import {app} from './firebase/config.jsx';
+import {db} from './firebase/config.jsx'; */
+
 function App() {
 
   /* const greeting = 'Welcome to Cafer Coffee'; */
@@ -28,7 +31,6 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/cart' element={<Cart />} />
         </Routes>
-        
         
       </BrowserRouter>
 
