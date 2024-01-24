@@ -41,12 +41,18 @@ function App() {
 
     return cart.reduce((acc, curr) => acc + curr.counter, 0);
   }
-  console.log('Context Value:', { cart, handleAddingToCartBtn, cartQuantity });
 
+  const totalPrice = () => {
+    return cart.reduce((acc, curr) => acc + curr.price * curr.counter, 0)
+  }
+
+  const handleReset = () => {
+    setCart([]);
+  }
 
   return (
     <>
-    <CartContext.Provider value ={{cart, handleAddingToCartBtn, cartQuantity}}>
+    <CartContext.Provider value ={{cart, handleAddingToCartBtn, cartQuantity, totalPrice, handleReset}}>
       <BrowserRouter>
 
         <Navbar />
@@ -64,7 +70,7 @@ function App() {
         
       </BrowserRouter>
 
-      <footer className='footer title'>the footer information will be placed here</footer>
+      {/* <footer className='footer title'>the footer information will be placed here</footer> */}
   
       </CartContext.Provider>
     </>

@@ -158,9 +158,32 @@
   box-shadow: 1px 1px 10px #646cff;
   cursor: pointer;
   margin-top: -10rem;
+}
+.cart-item {
+  width: 120rem;
+  display: flex;
+  flex-direction: row;
+/*   align-items: flex-start;
+  justify-content: flex-start; */
+  gap: 1rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #646cff;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 10px #646cff;
+  padding: 1rem;
 
 }
-
+.cart-item-p {
+  font-size: 1.5rem;
+  margin: 0;
+  text-align: left;
+}
+.cart-btn-reset {
+  width: 15rem;
+  font-size: 2rem;
+}
 @media screen and (max-width: 347px) {
   .form {
     width: 30rem;
