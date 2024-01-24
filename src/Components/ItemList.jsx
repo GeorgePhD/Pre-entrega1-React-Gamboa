@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+/* import PropTypes from 'prop-types'; */
 import Item from './Item';
 import '../../src/App.css';
 const ItemList = ({products}) => {
@@ -13,7 +13,7 @@ const ItemList = ({products}) => {
     );
 };
 
-ItemList.propTypes = {
+/* ItemList.propTypes = {
     products: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.number.isRequired,
@@ -23,10 +23,9 @@ ItemList.propTypes = {
             country: PropTypes.string.isRequired,
             strength: PropTypes.string.isRequired,
             image_url: PropTypes.string.isRequired,
-            // Add more prop types as needed for other properties
         })
     ).isRequired,
-};
+}; */
 
 
 export default ItemList

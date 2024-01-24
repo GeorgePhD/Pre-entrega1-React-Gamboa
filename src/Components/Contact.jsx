@@ -15,14 +15,18 @@ const Contact = () => {
   const handleSubmit = async(e) => {
     e.preventDefault();
 
-    addDoc(ordersCollection, order).then(({ id }) => setOrderId(id));
-    console.log(name, email);
-
     const order = {
       name,
       email,
       message
     };
+    
+    console.log('sent')
+
+    addDoc(ordersCollection, order).then(({ id }) => setOrderId(id));
+    console.log(name, email);
+
+    
   
 
     try {
@@ -46,7 +50,7 @@ const Contact = () => {
         <label className='form-text' htmlFor="email">Email</label>
         <input className='form-text' type="email" name="email" id="email" placeholder='Enter your email' onChange={(e) => setEmail(e.target.value)} value={email}/>
         <label className='form-text' htmlFor="message">Message</label>
-        <textarea className='form-text' name="message" id="message" cols="30" rows="10" placeholder='Enter your message'></textarea>
+        <textarea onChange={(e) => setMessage(e.target.value)} value={message} className='form-text' name="message" id="message" cols="30" rows="10" placeholder='Enter your message'></textarea>
         <input className='form-btn' type="submit" value="Submit"/>
     </form>
     <p>{orderId}</p>

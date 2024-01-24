@@ -1,20 +1,28 @@
-
-import { Link } from 'react-router-dom';
-import '../styles/texts.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import { useContext } from 'react';
-import { CartContext } from '../context/ShoppingCartContext';
-
+import { useContext } from "react";
+import { CartContext } from "../context/ShoppingCartContext";
 
 const Cart = () => {
 
-    const { cartQuantity } = useContext(CartContext);
+    const { cart } = useContext(CartContext);
 
     return (
-        <>
-        <li><Link className='menu-items' to='/cart'><FontAwesomeIcon className='shopping-cart' icon={faShoppingCart}></FontAwesomeIcon><span className='cart-quantity'>{cartQuantity()}</span></Link></li>
-        </>
+        <div className="cart-container">
+            <h1 className="cart-title">Cart</h1>
+
+            {
+                cart.map((item) => (
+                    <div className="cart-item" key={item.id}>
+                        <h2>{item.brand_name}</h2>
+                        <p>{item.brew}</p>
+                        <p>{item.price}</p>
+                        <p>{item.country}</p>
+                        <p>{item.strength}</p>
+                        <img src={item.image_url} alt=""  />
+                    </div>
+
+                ))
+            }
+        </div>
     )
 }
 

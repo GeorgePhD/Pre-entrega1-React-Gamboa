@@ -1,6 +1,6 @@
 import '../styles/navbar.css';
 import { Link } from 'react-router-dom';
-import Cart from './Cart.jsx';
+import CartWidget from './CartWidget.jsx';
 import { useState, useEffect } from 'react';
 import coffeeData from '../data/coffee-data.json';
 
@@ -42,7 +42,7 @@ const Navbar = () => {
                     )}
                 </li>
                 <li><Link className='menu-items' to='/contact'>Contact</Link></li>
-                <Cart />
+                <CartWidget />
             </ul>
         </nav>
 

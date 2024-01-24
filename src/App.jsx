@@ -9,6 +9,7 @@ import ItemListContainer from './Components/ItemListContainer.jsx';
 import ItemDetailContainer from './Components/ItemDetailContainer.jsx';
 import { useState } from 'react';
 import { CartContext } from './context/ShoppingCartContext.jsx';
+import CartWidget from './Components/CartWidget.jsx';
 
 
 /* import {app} from './firebase/config.jsx';
@@ -40,6 +41,8 @@ function App() {
 
     return cart.reduce((acc, curr) => acc + curr.counter, 0);
   }
+  console.log('Context Value:', { cart, handleAddingToCartBtn, cartQuantity });
+
 
   return (
     <>
@@ -47,7 +50,6 @@ function App() {
       <BrowserRouter>
 
         <Navbar />
-        {/* <ItemListContainer greeting={greeting}/> */}
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/item/:id' element={<ItemDetailContainer />} />
@@ -56,6 +58,7 @@ function App() {
           <Route path='/products' element={<ItemListContainer />} />
           <Route path='/products/:strength' element={<ItemListContainer />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/cartwidget' element={<CartWidget />} />
           <Route path='/cart' element={<Cart />} />
         </Routes>
         
@@ -63,7 +66,6 @@ function App() {
 
       <footer className='footer title'>the footer information will be placed here</footer>
   
-      {/* <ItemDetailContainer itemId={2}/> */}
       </CartContext.Provider>
     </>
   )

@@ -1,11 +1,12 @@
-import PropTypes from 'prop-types';
+/* import PropTypes from 'prop-types'; */
 import '../../src/App.css';
 import { Link } from 'react-router-dom';
 const Item = ({product}) => {
+
     return (
         <div>
             <div className='products'>
-                <img className='products-container-img' src={`/assets/${product.image_url}`} alt="" />
+                <img className='products-container-img' src={`/assets/${product.image_url}`} alt={product.brand_name} />
                 <p className='products-container-p'>Brand : {product.brand_name}</p>
                 <p className='products-container-p'>Brew : {product.brew}</p>
                 <p className='products-container-p'>Price : {product.price}</p>
@@ -18,7 +19,7 @@ const Item = ({product}) => {
         </div>
     )
 }
-Item.propTypes = {
+/* Item.propTypes = {
     product: PropTypes.shape({
         id: PropTypes.number.isRequired,
         brand_name: PropTypes.string.isRequired,
@@ -27,9 +28,9 @@ Item.propTypes = {
         country: PropTypes.string.isRequired,
         strength: PropTypes.string.isRequired,
         image_url: PropTypes.string.isRequired,
-        // Add more prop types as needed for other properties
+        
     }).isRequired,
-};
+}; */
 
 
 export default Item
