@@ -1,7 +1,6 @@
 import '../styles/navbar.css';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import Cart from './Cart.jsx';
 import { useState, useEffect } from 'react';
 import coffeeData from '../data/coffee-data.json';
 
@@ -43,7 +42,7 @@ const Navbar = () => {
                     )}
                 </li>
                 <li><Link className='menu-items' to='/contact'>Contact</Link></li>
-                <li><Link className='menu-items' to='/cart'><FontAwesomeIcon className='shopping-cart' icon={faShoppingCart}></FontAwesomeIcon><span className='cart-quantity'>15</span></Link></li>
+                <Cart />
             </ul>
         </nav>
 

@@ -2,21 +2,48 @@ import Navbar from './Components/Navbar.jsx';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import About from './Components/About.jsx';
-/* import Products from './Components/Products.jsx'; */
 import Contact from './Components/Contact.jsx';
 import Cart from './Components/Cart.jsx';
 import Home from './Components/Home.jsx';
 import ItemListContainer from './Components/ItemListContainer.jsx';
 import ItemDetailContainer from './Components/ItemDetailContainer.jsx';
+import { useState } from 'react';
+import { CartContext } from './context/ShoppingCartContext.jsx';
+
+
 /* import {app} from './firebase/config.jsx';
 import {db} from './firebase/config.jsx'; */
 
 function App() {
 
-  /* const greeting = 'Welcome to Cafer Coffee'; */
+  const [cart, setCart] = useState([]);
+
+  const handleAddingToCartBtn = (item, counter) => {
+
+    const addedItem = {...item, counter};
+    const newCart = [...cart];
+    const isInCart = newCart.find((item) => item.id === addedItem.id);
+
+    if (isInCart) {
+        isInCart.counter += counter;
+        setCart(newCart);
+        
+    } else {
+        newCart.push(addedItem);
+        setCart(newCart);
+        
+    }
+    setCart(newCart);
+  }
+
+  const cartQuantity = () => {
+
+    return cart.reduce((acc, curr) => acc + curr.counter, 0);
+  }
 
   return (
     <>
+    <CartContext.Provider value ={{cart, handleAddingToCartBtn, cartQuantity}}>
       <BrowserRouter>
 
         <Navbar />
@@ -37,6 +64,7 @@ function App() {
       <footer className='footer title'>the footer information will be placed here</footer>
   
       {/* <ItemDetailContainer itemId={2}/> */}
+      </CartContext.Provider>
     </>
   )
 }

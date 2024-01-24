@@ -4,10 +4,10 @@ export const CartContext = createContext(null);
 
 const ShoppingCartProvider = ({ children }) => {
 
+    const {user, age} = useContext(CartContext);
+    console.log(user, age)
+
     const [cart, setCart] = useState([]);
-
-    const comision = "react in coderhouse";
-
 
     return (
         <CartContext.Provider value={{comision, cart, setCart}}>

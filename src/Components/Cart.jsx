@@ -1,12 +1,19 @@
 
+import { Link } from 'react-router-dom';
 import '../styles/texts.css';
-import image from '/assets/cafer-1.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { useContext } from 'react';
+import { CartContext } from '../context/ShoppingCartContext';
+
+
 const Cart = () => {
+
+    const { cartQuantity } = useContext(CartContext);
 
     return (
         <>
-        <h1 className='title'>the cart information will be placed here</h1>
-        <img className='products-img' src={image} />
+        <li><Link className='menu-items' to='/cart'><FontAwesomeIcon className='shopping-cart' icon={faShoppingCart}></FontAwesomeIcon><span className='cart-quantity'>{cartQuantity()}</span></Link></li>
         </>
     )
 }
