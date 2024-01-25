@@ -50,7 +50,7 @@ const ShoppingCartProvider = ({ children }) => {
                 // User clicked "Vaciar"
                 setCart([]);
                 Swal.fire({
-                    icon: 'success', 
+                    icon: 'success',
                     title: 'gracias por tu compra 😊',
                 });
             } else {
@@ -82,14 +82,20 @@ const ShoppingCartProvider = ({ children }) => {
     };
     //setCart([]);
 
+    const handleAddItem = (item) => {
+        handleAddingToCartBtn(item, 1); // Assuming you want to add 1 unit when clicking "Add Item"
+    };
 
+    const handleRemoveItem = (item) => {
+        handleAddingToCartBtn(item, -1)
+    };
 
     useEffect(() => {
         localStorage.setItem('cart', JSON.stringify(cart));
     }, [cart])
 
     return (
-        <CartContext.Provider value={{ cart, handleAddingToCartBtn, cartQuantity, totalPrice, handleReset, handleBuyItems }}>
+        <CartContext.Provider value={{ cart, handleAddingToCartBtn, cartQuantity, totalPrice, handleReset, handleBuyItems, handleAddItem, handleRemoveItem }}>
             {children}
         </CartContext.Provider>
 

@@ -3,7 +3,7 @@ import { CartContext } from "../context/ShoppingCartContext";
 
 const Cart = () => {
 
-    const { cart, totalPrice, handleReset, handleBuyItems } = useContext(CartContext);
+    const { cart, totalPrice, handleReset, handleBuyItems, handleAddItem, handleRemoveItem } = useContext(CartContext);
 
     return (
         <div className="cart-container">
@@ -17,7 +17,10 @@ const Cart = () => {
                         <p className="cart-item-p">price: ${item.price}</p>
                         <p className="cart-item-p">country: {item.country}</p>
                         <p className="cart-item-p">strength: {item.strength}</p>
-                        <p className="cart-item-p">total ${item.price * item.counter} units: {item.counter}</p>
+                        <p className="cart-item-p">total ${item.price * item.counter} 
+                        units: {item.counter}</p>
+                        <button className="cart-btn-add" onClick={() => handleAddItem(item)}>+</button>
+                        <button className="cart-btn-remove" onClick={() => handleRemoveItem(item)}>-</button>
                     </div>
 
                 ))
