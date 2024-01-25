@@ -7,52 +7,17 @@ import Cart from './Components/Cart.jsx';
 import Home from './Components/Home.jsx';
 import ItemListContainer from './Components/ItemListContainer.jsx';
 import ItemDetailContainer from './Components/ItemDetailContainer.jsx';
-import { useState } from 'react';
-import { CartContext } from './context/ShoppingCartContext.jsx';
 import CartWidget from './Components/CartWidget.jsx';
-
+import ShoppingCartProvider from './context/ShoppingCartContext.jsx';
 
 /* import {app} from './firebase/config.jsx';
 import {db} from './firebase/config.jsx'; */
 
 function App() {
 
-  const [cart, setCart] = useState([]);
-
-  const handleAddingToCartBtn = (item, counter) => {
-
-    const addedItem = {...item, counter};
-    const newCart = [...cart];
-    const isInCart = newCart.find((item) => item.id === addedItem.id);
-
-    if (isInCart) {
-        isInCart.counter += counter;
-        setCart(newCart);
-        
-    } else {
-        newCart.push(addedItem);
-        setCart(newCart);
-        
-    }
-    setCart(newCart);
-  }
-
-  const cartQuantity = () => {
-
-    return cart.reduce((acc, curr) => acc + curr.counter, 0);
-  }
-
-  const totalPrice = () => {
-    return cart.reduce((acc, curr) => acc + curr.price * curr.counter, 0)
-  }
-
-  const handleReset = () => {
-    setCart([]);
-  }
-
   return (
     <>
-    <CartContext.Provider value ={{cart, handleAddingToCartBtn, cartQuantity, totalPrice, handleReset}}>
+    <ShoppingCartProvider>
       <BrowserRouter>
 
         <Navbar />
@@ -72,7 +37,7 @@ function App() {
 
       {/* <footer className='footer title'>the footer information will be placed here</footer> */}
   
-      </CartContext.Provider>
+      </ShoppingCartProvider>
     </>
   )
 }

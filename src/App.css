@@ -68,18 +68,19 @@
   margin-top: 2rem;
 }
 .products-img {
-  width: 40%;
+  width: 30%;
   margin-top: 3rem;
   border-radius: 1rem;
   box-shadow: 1px 1px 10px #646cff;
 }
 .about-container {
+  width: 80%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 0 auto;
+  margin-top: 5rem;
   gap: 2rem;
   border: 1px solid #646cff;
   padding: 2rem;
@@ -180,9 +181,11 @@
   margin: 0;
   text-align: left;
 }
-.cart-btn-reset {
+.cart-btn-reset,
+.cart-btn-buy {
   width: 15rem;
   font-size: 2rem;
+  margin-right: 1rem;
 }
 @media screen and (max-width: 347px) {
   .form {
